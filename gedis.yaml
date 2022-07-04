@@ -1,0 +1,6 @@
+bind: 0.0.0.0
+port: 6400
+maxclients: 128
+appendonly: no
+appendfilename: appendonly.aof
+dbfilename: test.rdb

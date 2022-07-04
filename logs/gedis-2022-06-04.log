@@ -1,0 +1,157 @@
+[ERROR][rdb.go:18] 2022/06/04 16:14:44 open rdb file failed
+[INFO][tcpServer.go:38] 2022/06/04 16:14:44 bind: 0.0.0.0:6399, start listening...
+[INFO][tcpServer.go:47] 2022/06/04 16:14:47 shutting down...
+[INFO][server.go:83] 2022/06/04 16:14:47 handler shutting down...
+[ERROR][rdb.go:18] 2022/06/04 16:15:02 open rdb file failed
+[ERROR][rdb.go:18] 2022/06/04 16:15:46 open rdb file failed
+[INFO][tcpServer.go:38] 2022/06/04 16:15:46 bind: 0.0.0.0:6399, start listening...
+[INFO][tcpServer.go:47] 2022/06/04 16:15:50 shutting down...
+[INFO][server.go:83] 2022/06/04 16:15:50 handler shutting down...
+[INFO][tcpServer.go:38] 2022/06/04 16:19:12 bind: 0.0.0.0:6399, start listening...
+[INFO][tcpServer.go:67] 2022/06/04 16:19:19 accept link
+[ERROR][server.go:61] 2022/06/04 16:19:43 empty payload
+[INFO][tcpServer.go:47] 2022/06/04 16:19:44 shutting down...
+[INFO][server.go:83] 2022/06/04 16:19:44 handler shutting down...
+[INFO][server.go:83] 2022/06/04 16:19:44 handler shutting down...
+[INFO][tcpServer.go:38] 2022/06/04 16:20:02 bind: 0.0.0.0:6399, start listening...
+[INFO][tcpServer.go:67] 2022/06/04 16:20:20 accept link
+[INFO][tcpServer.go:38] 2022/06/04 16:29:47 bind: 0.0.0.0:6399, start listening...
+[INFO][tcpServer.go:67] 2022/06/04 16:29:52 accept link
+[INFO][tcpServer.go:38] 2022/06/04 16:34:56 bind: 0.0.0.0:6399, start listening...
+[INFO][tcpServer.go:67] 2022/06/04 16:34:59 accept link
+[INFO][tcpServer.go:38] 2022/06/04 16:36:06 bind: 0.0.0.0:6399, start listening...
+[INFO][tcpServer.go:67] 2022/06/04 16:36:10 accept link
+[INFO][tcpServer.go:38] 2022/06/04 16:40:29 bind: 0.0.0.0:6399, start listening...
+[INFO][tcpServer.go:67] 2022/06/04 16:40:31 accept link
+[INFO][tcpServer.go:38] 2022/06/04 16:40:53 bind: 0.0.0.0:6399, start listening...
+[INFO][tcpServer.go:67] 2022/06/04 16:40:56 accept link
+[ERROR][main.go:42] 2022/06/04 16:45:25 listen tcp 0.0.0.0:6399: bind: Only one usage of each socket address (protocol/network address/port) is normally permitted.
+[INFO][tcpServer.go:38] 2022/06/04 16:45:45 bind: 0.0.0.0:6399, start listening...
+[INFO][tcpServer.go:67] 2022/06/04 16:45:53 accept link
+[INFO][tcpServer.go:38] 2022/06/04 16:49:32 bind: 0.0.0.0:6399, start listening...
+[INFO][tcpServer.go:67] 2022/06/04 16:49:35 accept link
+[INFO][tcpServer.go:38] 2022/06/04 16:54:11 bind: 0.0.0.0:6400, start listening...
+[INFO][tcpServer.go:67] 2022/06/04 16:54:55 accept link
+[INFO][tcpServer.go:38] 2022/06/04 16:55:43 bind: 0.0.0.0:6400, start listening...
+[INFO][tcpServer.go:67] 2022/06/04 16:55:57 accept link
+[INFO][tcpServer.go:38] 2022/06/04 16:56:55 bind: 0.0.0.0:6400, start listening...
+[INFO][tcpServer.go:38] 2022/06/04 16:56:59 bind: 0.0.0.0:6400, start listening...
+[INFO][tcpServer.go:67] 2022/06/04 16:57:04 accept link
+[WARN][database.go:50] 2022/06/04 16:57:38 error occurs: runtime error: index out of range [1] with length 1
+goroutine 35 [running]:
+runtime/debug.Stack(0xc00b5c38c8, 0xd2b140, 0xc003f3c000)
+	C:/Program Files/Go/src/runtime/debug/stack.go:24 +0xa5
+gedis/database.(*MultiDB).Exec.func1(0xc00b5c3f10)
+	E:/goTools/gedis/database/database.go:50 +0x65
+panic(0xd2b140, 0xc003f3c000)
+	C:/Program Files/Go/src/runtime/panic.go:965 +0x1c7
+gedis/database.(*DB).ExecMulti(0xc00005c050, 0x0, 0xc0000202a0, 0x4, 0x4, 0x0, 0x0)
+	E:/goTools/gedis/database/transaction.go:126 +0xf8a
+gedis/database.execMulti(0xc00005c050, 0xd79ba8, 0xc0000e6000, 0x0, 0x0)
+	E:/goTools/gedis/database/transaction.go:69 +0xfc
+gedis/database.(*DB).Exec(0xc00005c050, 0xd79ba8, 0xc0000e6000, 0xc003f340f0, 0x1, 0x1, 0xc000085080, 0xc000085108)
+	E:/goTools/gedis/database/signleDB.go:75 +0x2c9
+gedis/database.(*MultiDB).Exec(0xc000098150, 0xd79ba8, 0xc0000e6000, 0xc003f340f0, 0x1, 0x1, 0x0, 0x0)
+	E:/goTools/gedis/database/database.go:85 +0x3ad
+gedis/redis/server.(*Handler).Handle(0xc0000e8000, 0xd78a30, 0xc0000ac5b8, 0xd797c8, 0xc000006010)
+	E:/goTools/gedis/redis/server/server.go:73 +0x1a6
+gedis/tcp.ListenAndServe.func3(0xc00000a0e0, 0xd775d8, 0xc0000e8000, 0xd78a30, 0xc0000ac5b8, 0xd797c8, 0xc000006010)
+	E:/goTools/gedis/tcp/tcpServer.go:73 +0x8f
+created by gedis/tcp.ListenAndServe
+	E:/goTools/gedis/tcp/tcpServer.go:69 +0x1fb
+
+[INFO][tcpServer.go:47] 2022/06/04 16:59:51 shutting down...
+[INFO][server.go:83] 2022/06/04 16:59:51 handler shutting down...
+[ERROR][server.go:61] 2022/06/04 16:59:51 empty payload
+[INFO][server.go:83] 2022/06/04 16:59:51 handler shutting down...
+[INFO][tcpServer.go:38] 2022/06/04 16:59:54 bind: 0.0.0.0:6400, start listening...
+[INFO][tcpServer.go:67] 2022/06/04 16:59:57 accept link
+[WARN][database.go:50] 2022/06/04 17:08:24 error occurs: runtime error: index out of range [1] with length 1
+goroutine 14 [running]:
+runtime/debug.Stack(0x0, 0x0, 0x0)
+	C:/Program Files/Go/src/runtime/debug/stack.go:24 +0xac
+gedis/database.(*MultiDB).Exec.func1(0xc00055de00)
+	E:/goTools/gedis/database/database.go:50 +0x78
+panic(0xcd0860, 0xc008148000)
+	C:/Program Files/Go/src/runtime/panic.go:971 +0x4e6
+gedis/database.(*DB).ExecMulti(0xc00005c050, 0x0, 0xc0000863c0, 0x4, 0x4, 0x0, 0x0)
+	E:/goTools/gedis/database/transaction.go:126 +0x124f
+gedis/database.execMulti(0xc00005c050, 0xd004a8, 0xc000122000, 0x0, 0x0)
+	E:/goTools/gedis/database/transaction.go:69 +0x165
+gedis/database.(*DB).Exec(0xc00005c050, 0xd004a8, 0xc000122000, 0xc00b598078, 0x1, 0x1, 0x0, 0x0)
+	E:/goTools/gedis/database/signleDB.go:75 +0x430
+gedis/database.(*MultiDB).Exec(0xc000004168, 0xd004a8, 0xc000122000, 0xc00b598078, 0x1, 0x1, 0x0, 0x0)
+	E:/goTools/gedis/database/database.go:85 +0xa2f
+gedis/redis/server.(*Handler).Handle(0xc00005a000, 0xcff670, 0xc00000a5f8, 0xd00188, 0xc008150000)
+	E:/goTools/gedis/redis/server/server.go:73 +0x2dc
+gedis/tcp.ListenAndServe.func3(0xc00000a120, 0xcfe538, 0xc00005a000, 0xcff670, 0xc00000a5f8, 0xd00188, 0xc008150000)
+	E:/goTools/gedis/tcp/tcpServer.go:73 +0xc5
+created by gedis/tcp.ListenAndServe
+	E:/goTools/gedis/tcp/tcpServer.go:69 +0x353
+
+[INFO][tcpServer.go:38] 2022/06/04 17:21:28 bind: 0.0.0.0:6400, start listening...
+[INFO][tcpServer.go:67] 2022/06/04 17:21:56 accept link
+[WARN][database.go:50] 2022/06/04 17:22:14 error occurs: index out of bound
+goroutine 35 [running]:
+runtime/debug.Stack(0xc001477a98, 0xf2a520, 0xf942e8)
+	C:/Program Files/Go/src/runtime/debug/stack.go:24 +0xa5
+gedis/database.(*MultiDB).Exec.func1(0xc001477f10)
+	E:/goTools/gedis/database/database.go:50 +0x65
+panic(0xf2a520, 0xf942e8)
+	C:/Program Files/Go/src/runtime/panic.go:965 +0x1c7
+gedis/datastruct/list.(*LinkedList).Insert(0xc00147a078, 0x0, 0xf286a0, 0xc00147a090)
+	E:/goTools/gedis/datastruct/list/linked.go:94 +0x1a5
+gedis/database.execLPush(0xc00005c050, 0xc00012a018, 0x4, 0x4, 0x0, 0x0)
+	E:/goTools/gedis/database/list.go:144 +0x12f
+gedis/database.(*DB).execNormalCommand(0xc00005c050, 0xc00012a000, 0x5, 0x5, 0x0, 0x0)
+	E:/goTools/gedis/database/signleDB.go:115 +0x35f
+gedis/database.(*DB).Exec(0xc00005c050, 0xf99ba8, 0xc000122000, 0xc00012a000, 0x5, 0x5, 0xc000502300, 0xc000502388)
+	E:/goTools/gedis/database/signleDB.go:95 +0x56d
+gedis/database.(*MultiDB).Exec(0xc000004168, 0xf99ba8, 0xc000122000, 0xc00012a000, 0x5, 0x5, 0x0, 0x0)
+	E:/goTools/gedis/database/database.go:85 +0x3ad
+gedis/redis/server.(*Handler).Handle(0xc00005a000, 0xf98a30, 0xc00000a5f8, 0xf997c8, 0xc001468000)
+	E:/goTools/gedis/redis/server/server.go:73 +0x1a6
+gedis/tcp.ListenAndServe.func3(0xc00000a110, 0xf975d8, 0xc00005a000, 0xf98a30, 0xc00000a5f8, 0xf997c8, 0xc001468000)
+	E:/goTools/gedis/tcp/tcpServer.go:73 +0x8f
+created by gedis/tcp.ListenAndServe
+	E:/goTools/gedis/tcp/tcpServer.go:69 +0x1fb
+
+[WARN][database.go:50] 2022/06/04 17:22:31 error occurs: index out of bound
+goroutine 35 [running]:
+runtime/debug.Stack(0xc001477a98, 0xf2a520, 0xf942e8)
+	C:/Program Files/Go/src/runtime/debug/stack.go:24 +0xa5
+gedis/database.(*MultiDB).Exec.func1(0xc001477f10)
+	E:/goTools/gedis/database/database.go:50 +0x65
+panic(0xf2a520, 0xf942e8)
+	C:/Program Files/Go/src/runtime/panic.go:965 +0x1c7
+gedis/datastruct/list.(*LinkedList).Insert(0xc00147a078, 0x0, 0xf286a0, 0xc0000044e0)
+	E:/goTools/gedis/datastruct/list/linked.go:94 +0x1a5
+gedis/database.execLPush(0xc00005c050, 0xc00b5d8018, 0x4, 0x4, 0x0, 0x0)
+	E:/goTools/gedis/database/list.go:144 +0x12f
+gedis/database.(*DB).execNormalCommand(0xc00005c050, 0xc00b5d8000, 0x5, 0x5, 0x0, 0x0)
+	E:/goTools/gedis/database/signleDB.go:115 +0x35f
+gedis/database.(*DB).Exec(0xc00005c050, 0xf99ba8, 0xc000122000, 0xc00b5d8000, 0x5, 0x5, 0xc000502300, 0xc000502388)
+	E:/goTools/gedis/database/signleDB.go:95 +0x56d
+gedis/database.(*MultiDB).Exec(0xc000004168, 0xf99ba8, 0xc000122000, 0xc00b5d8000, 0x5, 0x5, 0x0, 0x0)
+	E:/goTools/gedis/database/database.go:85 +0x3ad
+gedis/redis/server.(*Handler).Handle(0xc00005a000, 0xf98a30, 0xc00000a5f8, 0xf997c8, 0xc001468000)
+	E:/goTools/gedis/redis/server/server.go:73 +0x1a6
+gedis/tcp.ListenAndServe.func3(0xc00000a110, 0xf975d8, 0xc00005a000, 0xf98a30, 0xc00000a5f8, 0xf997c8, 0xc001468000)
+	E:/goTools/gedis/tcp/tcpServer.go:73 +0x8f
+created by gedis/tcp.ListenAndServe
+	E:/goTools/gedis/tcp/tcpServer.go:69 +0x1fb
+
+[INFO][tcpServer.go:47] 2022/06/04 17:23:10 shutting down...
+[INFO][server.go:83] 2022/06/04 17:23:10 handler shutting down...
+[ERROR][server.go:61] 2022/06/04 17:23:10 empty payload
+[INFO][server.go:83] 2022/06/04 17:23:10 handler shutting down...
+[INFO][tcpServer.go:38] 2022/06/04 17:23:13 bind: 0.0.0.0:6400, start listening...
+[INFO][tcpServer.go:67] 2022/06/04 17:23:17 accept link
+[INFO][tcpServer.go:38] 2022/06/04 17:28:38 bind: 0.0.0.0:6400, start listening...
+[INFO][tcpServer.go:67] 2022/06/04 17:28:41 accept link
+[INFO][tcpServer.go:38] 2022/06/04 17:30:43 bind: 0.0.0.0:6400, start listening...
+[INFO][tcpServer.go:67] 2022/06/04 17:30:47 accept link
+[INFO][tcpServer.go:47] 2022/06/04 17:40:05 shutting down...
+[INFO][server.go:83] 2022/06/04 17:40:05 handler shutting down...
+[ERROR][server.go:61] 2022/06/04 17:40:05 empty payload
+[INFO][server.go:83] 2022/06/04 17:40:05 handler shutting down...
